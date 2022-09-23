@@ -53,5 +53,18 @@ namespace TestProject1
             Assert.AreEqual(expected, actual);
             Console.WriteLine(actual);
         }
+        [TestMethod]
+        public void TestPasswordRuleOne()
+        {
+            string expected = "roanaksharma";
+
+            PassWordRule1 passWordRule1 = new PassWordRule1("roanaksharma");
+            string actual = passWordRule1.ValidatePassword();
+
+            Assert.AreEqual(expected, actual);
+            Console.WriteLine(actual);
+        }
+
+        
     }
 }
