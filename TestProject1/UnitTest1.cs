@@ -98,6 +98,23 @@ namespace TestProject1
             Assert.AreEqual(expected, actual);
             Console.WriteLine(actual);
         }
+        [TestMethod]
+        public void TestEmailSamples()
+        {
+            string expected1 = "abc.100@abc.com.au";
+            string expected2 = "abc@.com.my";
+
+            EmailSample emailSample = new EmailSample("abc.100@abc.com.au");
+            string actual1 = emailSample.ValidateEmail();
+
+            EmailSample emailSample1 = new EmailSample("abc@.com.my");
+            string actual2 = emailSample1.ValidateEmail();
+
+            Assert.AreEqual(expected1, actual1);
+            Assert.AreNotEqual(expected2, actual2);
+            Console.WriteLine(actual1);
+            Console.WriteLine(actual2);
+        }
 
 
     }
