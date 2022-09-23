@@ -56,15 +56,27 @@ namespace TestProject1
         [TestMethod]
         public void TestPasswordRuleOne()
         {
-            string expected = "roanaksharma";
+            string expected = "roshanpalkan";
 
-            PassWordRule1 passWordRule1 = new PassWordRule1("roanaksharma");
+            PassWordRule1 passWordRule1 = new PassWordRule1("roshanpalkan");
             string actual = passWordRule1.ValidatePassword();
 
             Assert.AreEqual(expected, actual);
             Console.WriteLine(actual);
         }
+        [TestMethod]
 
-        
+        public void TestPasswordRuleTwo()
+        {
+            string expected = "RoshanPalkandwar";
+
+            PassWordRule2 passWordRule2 = new PassWordRule2("RoshanPalkandwar");
+            string actual = passWordRule2.ValidatePassword();
+
+            Assert.AreEqual(expected, actual);
+            Console.WriteLine(actual);
+        }
+
+
     }
 }

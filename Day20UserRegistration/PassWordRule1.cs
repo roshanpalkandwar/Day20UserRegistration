@@ -26,7 +26,7 @@ namespace Day20UserRegistration
             }
             else
             {
-                //Console.WriteLine("Password is valid");
+                
                 return password;
             }
         }
