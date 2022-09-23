@@ -20,13 +20,27 @@ namespace TestProject1
         [TestMethod]
         public void TestLastName()
         {
-            string expected = "Sharma";
+            string expected = "Roshan";
 
-            LastName UCTwo = new LastName("Sharma");
-            string actual = UCTwo.ValidateLastName();
+            LastName lastName = new LastName("Roshan");
+            string actual = lastName.ValidateLastName();
 
             Assert.AreEqual(expected, actual);
             Console.WriteLine(actual);
+        }
+        [TestMethod]
+        public void TestEmail()
+        {
+            string expected = "abc.xyz@bl.co.in";
+
+            Email email = new Email("abc.xyz@bl.co.in");
+            string actual = email.ValidateEmail();
+
+            Assert.AreEqual(expected , actual);
+            Console.WriteLine(actual);
+
+            
+            
         }
     }
 }
