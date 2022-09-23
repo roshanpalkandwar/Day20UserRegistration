@@ -17,5 +17,16 @@ namespace TestProject1
             Console.WriteLine(actual);
 
         }
+        [TestMethod]
+        public void TestLastName()
+        {
+            string expected = "Sharma";
+
+            LastName UCTwo = new LastName("Sharma");
+            string actual = UCTwo.ValidateLastName();
+
+            Assert.AreEqual(expected, actual);
+            Console.WriteLine(actual);
+        }
     }
 }
