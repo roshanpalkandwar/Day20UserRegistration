@@ -38,9 +38,20 @@ namespace TestProject1
 
             Assert.AreEqual(expected , actual);
             Console.WriteLine(actual);
+            
+            
+            
+        }
+        [TestMethod]
+        public void TestMobileNumber()
+        {
+            string expected = "+91 7123456789";
 
-            
-            
+            Mobile mobile = new Mobile("+91 7123456789");
+            string actual = mobile.ValideMobileNumber();
+
+            Assert.AreEqual(expected, actual);
+            Console.WriteLine(actual);
         }
     }
 }
