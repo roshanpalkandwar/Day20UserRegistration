@@ -87,6 +87,17 @@ namespace TestProject1
             Assert.AreEqual(expected, actual);
             Console.WriteLine(actual);
         }
+        [TestMethod]
+        public void TestPasswordRuleFour()
+        {
+            string expected = "RoshanPalkandwar@123";
+
+            PassWordRules4 passWordRules4 = new PassWordRules4("RoshanPalkandwar@123");
+            string actual = passWordRules4.ValidatePassword();
+
+            Assert.AreEqual(expected, actual);
+            Console.WriteLine(actual);
+        }
 
 
     }
